@@ -1,0 +1,9 @@
+{
+  "name": "NEXON Medical OS pro 666",
+  "description": "The advanced Medical Operating System for 21 September University. Powered by Gemini 2.5.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone",
+    "camera"
+  ]
+}
