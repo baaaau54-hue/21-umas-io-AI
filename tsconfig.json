@@ -1,10 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "module": "ES2020",
     "moduleResolution": "node",
-    "lib": ["ES2020", "DOM"],
+    "lib": ["ES2022", "DOM"],
     "outDir": "./out-tsc",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -15,9 +15,11 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "useDefineForClassFields": false,
     "types": []
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
