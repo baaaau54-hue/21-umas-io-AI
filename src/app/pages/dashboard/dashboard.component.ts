@@ -115,7 +115,7 @@ import { WelcomeComponent } from '../../components/welcome/welcome.component';
               
               <textarea 
                 [(ngModel)]="inputValue" 
-                (keydown.enter)="!$event.shiftKey && onSend($event)"
+                (keydown.enter)="handleEnter($event)"
                 [placeholder]="state.mode() === 'pro' ? 'اكتب تفاصيل الحالة السريرية للتحليل العميق...' : 'اكتب سؤالك هنا للإجابة السريعة...'"
                 class="w-full bg-transparent border-none text-white placeholder-gray-500 focus:ring-0 resize-none py-3 min-h-[44px] max-h-32"
                 rows="1"
@@ -157,6 +157,13 @@ export class DashboardComponent {
       reader.onload = (e: any) => this.selectedImage = e.target.result;
       reader.readAsDataURL(file);
     }
+  }
+
+  handleEnter(event: Event) {
+    if ((event as KeyboardEvent).shiftKey) {
+      return;
+    }
+    this.onSend(event);
   }
 
   onSend(e?: Event) {
