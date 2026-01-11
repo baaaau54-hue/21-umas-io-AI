@@ -1,5 +1,5 @@
 
-import { ApplicationConfig, provideZonelessChangeDetection, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
 import { provideRouter, withHashLocation } from '@angular/router';
 import { routes } from './app.routes';
 import { LucideAngularModule, icons } from 'lucide-angular';
